@@ -3,7 +3,7 @@
 #
 
 # Name of your site (displayed in the header)
-name: Rhyztech
+title: Rhyztech
 
 # Short bio or description (displayed in the header)
 description: rhyztech developer's blog
@@ -14,6 +14,8 @@ avatar: https://avatars0.githubusercontent.com/u/1409537?s=460&v=4
 #
 # Flags below are optional
 #
+markdown:         kramdown
+highlighter: rouge
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -25,7 +27,7 @@ footer-links:
   instagram:
   linkedin:
   pinterest:
-  rss: # just type anything here for a working RSS icon
+  rss: true
   twitter: rhythm191
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
@@ -49,14 +51,27 @@ url:
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+# author
+author:
+  name: 'rhythm191'
+  url: https://twitter.com/rhythm191
+
+# home link
+sidebar_home_link: false
+
+# paginate
+paginate: 10
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
 
+
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
-version: v1.2.0
+# version: 1.2.0
+
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
