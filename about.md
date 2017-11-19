@@ -4,12 +4,25 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+### このサイトについて
 
-### More Information
+中の人がWeb系の仕事で得た知見を書きます。
+フロントエンドの話をしたり、サーバーサイドの話をしたり、ボードゲームの話をしたりします。
 
-A place to include any other types of information that you'd like to include about yourself.
 
-### Contact me
+### 中の人
 
-[email@domain.com](mailto:email@domain.com)
+Webディベロッパーです。
+
+#### 経験言語
+
+- ruby
+- Java
+- Scala
+- JavaScript
+
+#### ソーシャル
+
+- [Github](https://github.com/rhythm191)
+- [Twitter](https://twitter.com/rhythm191)
+
