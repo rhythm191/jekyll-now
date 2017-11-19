@@ -67,6 +67,11 @@ permalink: /:title/
 # The release of Jekyll Now that you're using
 # version: 1.2.0
 
+collections:
+  products:
+    output: true
+    permalink: /products/:path/
+
 #
 # Flags below are optional
 #

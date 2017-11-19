@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="content">
+  {% include pagination-newer.html %}
+
+  {{ content }}
+
+  {% for product in paginator.products %}
+  <article class="product-body">
+    <h2 class="product-title">
+      <a href="{{ site.baseurl }}{{ product.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    {% include post-meta.html post=product %}
+
+    {{ product.content }}
+
+  </article>
+  {% endfor %}
+
+  {% include pagination-older.html %}
+</div>
