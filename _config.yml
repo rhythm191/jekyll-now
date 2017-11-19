@@ -72,6 +72,8 @@ collections:
     output: true
     permalink: /products/:path/
 
+comments: false
+
 #
 # Flags below are optional
 #
