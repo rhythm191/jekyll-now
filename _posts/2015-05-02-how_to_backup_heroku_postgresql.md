@@ -1,6 +1,7 @@
 ---
 layout: post
 title: herokuのpostgresqlのバックアップについて
+cacategoriestegry: tech
 ---
 
 Herokuのpostgresqlのバックアップを行うpgbackupsプラグラインがいつの間にか本体に組み込まれていたので、その使い方を簡単に記録しておく。

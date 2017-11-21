@@ -1,6 +1,7 @@
 ---
 layout: post
 title: マウント，アンマウントってそもそも何？
+categories: tech
 ---
 
 マウントってそもそも何やってるの？を調べたメモ．

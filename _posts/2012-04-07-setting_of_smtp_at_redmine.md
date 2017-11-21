@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RedmineでPOP before SMTP で通知メールを送るための設定
+categories: tech
 ---
 
 Redmineは標準でPOP before SMTPに対応していない？し，

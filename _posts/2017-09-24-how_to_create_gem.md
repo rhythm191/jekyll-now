@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 実行スクリプト入りのgemを作成する方法
+categories: tech
 ---
 
 実行スクリプト入りのgemを作成する手順を紹介する。

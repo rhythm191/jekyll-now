@@ -1,6 +1,7 @@
 ---
 layout: post
 title: redmineの移行記録
+categories: tech
 ---
 
 自宅のサーバをさくらVPSに移行中(※暑いから

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: アプリケーションログの設計について
+categories: tech
 ---
 
 

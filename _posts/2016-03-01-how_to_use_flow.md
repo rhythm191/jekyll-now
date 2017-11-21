@@ -1,6 +1,7 @@
 ---
 layout: post
 title: flowの覚書(flow 0.19.0)
+categories: tech
 ---
 
 flowのバイナリ自体は型チェッカーだが、本質はJavaScriptに静的型付けなコーディングスタイルを提供すること。
