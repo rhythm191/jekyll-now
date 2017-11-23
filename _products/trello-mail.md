@@ -1,7 +1,7 @@
 ---
 layout: product
-title: Trello Mail
-date: 2017-11-23
+title: Trello Mail(Chrome Extension)
+date: 2017-10-20
 categories: product
 ---
 
