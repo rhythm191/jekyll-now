@@ -6,7 +6,8 @@ title: Products
 
 <div class="content">
 
-  {% for product in site.products %}
+  {% assign sorted = (site.products | sort: 'date') | reverse %}
+  {% for product in sorted %}
   <article class="product-body">
     <h2 class="product-title">
       <a class="product-title" href="{{ site.baseurl }}{{ product.url }}">
