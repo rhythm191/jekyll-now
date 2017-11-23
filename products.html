@@ -1,0 +1,22 @@
+---
+layout: default
+title: Products
+---
+
+
+<div class="content">
+
+  {% for product in site.products %}
+  <article class="product-body">
+    <h2 class="product-title">
+      <a class="product-title" href="{{ site.baseurl }}{{ product.url }}">
+        {{ product.title }}
+      </a>
+    </h2>
+    {% include post-meta.html post=product %}
+
+    {{ product.content }}
+
+  </article>
+  {% endfor %}
+</div>
