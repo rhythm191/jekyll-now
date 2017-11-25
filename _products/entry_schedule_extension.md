@@ -7,9 +7,6 @@ categories: product
 
 [https://chrome.google.com/webstore/detail/entry-schedule-extension/lflgndoomnijngiadiefecmonpifnlbp?hl=ja](https://chrome.google.com/webstore/detail/entry-schedule-extension/lflgndoomnijngiadiefecmonpifnlbp?hl=ja)
 
-
-![entry_schedule_extension]({{site.baseurl}}/images/products/show_empty_room.jpg){:height="517px" width="204px"}
-
 サイボウズOfficeのスケジュール登録に隔週を追加するChrome拡張機能です。
 
 ### 使い方
