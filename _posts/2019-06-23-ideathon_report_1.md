@@ -1,6 +1,6 @@
 ---
 layout: post
-title: #ideathonの経過観察その１
+title: チャンネルideathonの経過観察その１
 categories: tech
 ---
 
