@@ -16,7 +16,7 @@ jQuery で作られた資産があまりにも大きく、全てを Vue.js に�
 - Bootstrap 4.1
 - Bootstrap-vue 2.0
 
-## TL;DR
+## TLTR
 
 だいたいこれに従ってる。これを読め
 [https://qiita.com/midnightSuyama/items/efc5441a577f3d3abe74](https://qiita.com/midnightSuyama/items/efc5441a577f3d3abe74)
