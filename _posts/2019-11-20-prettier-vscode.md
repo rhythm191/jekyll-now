@@ -6,7 +6,7 @@ categories: tech
 
 何番煎じかわからないけど Vistual Studio Code と Prettier でコードの自動整形をする環境を構築したので雑に紹介します。
 
-https://github.com/rhythm191/eslint-prettier-sample
+[https://github.com/rhythm191/eslint-prettier-sample](https://github.com/rhythm191/eslint-prettier-sample)
 
 ## HTML
 
