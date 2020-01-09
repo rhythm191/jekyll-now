@@ -7,6 +7,6 @@
 
 * \_posts 配下に日付+タイトルのmarkdownファイルを作成する。
 * 記事を書く
-* `jekyll serve` で確認しよう
+* `bundle exec jekyll serve` で確認しよう
 * `http://127.0.0.1:4000/`をみろ
 * pushしたれ

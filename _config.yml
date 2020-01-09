@@ -12,6 +12,9 @@ description: rhyztech developer's blog
 avatar: https://avatars0.githubusercontent.com/u/1409537?s=460&v=4
 
 
+# site language
+lang: ja
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
@@ -28,6 +31,10 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+# twitter OGP infomation
+twitter:
+  username: rhythm191
+  card: summary
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -98,6 +105,7 @@ gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 # Exclude these files from your production _site
 exclude:
