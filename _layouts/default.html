@@ -6,6 +6,9 @@
 
   <body class="{{ page.layout }}{% if page.url == '/' %} home{% endif %}">
 
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+
     {% include sidebar.html %}
 
     <main class="container">

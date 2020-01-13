@@ -4,3 +4,13 @@
 ---
 
 @import "hydeout";
+
+.social-buttons {
+  display: flex;
+  align-items: flex-end;
+  
+  > iframe,
+  > div {
+    margin-right: 10px;
+  }
+}
