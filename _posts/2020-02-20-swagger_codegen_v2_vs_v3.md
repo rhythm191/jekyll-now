@@ -1,81 +1,141 @@
 ---
 layout: post
-title: Swagger Codegen v2 と v3の違い(2020/02版)
+title: Swagger Codegen と OpenAPI generatorの比較(2020/02版)
 categories: tech
 ---
 
-Swagger(OpenAPI)でAPIを作り、Swagger CodegenでAPIのスタブを自動生成する場合の、
-v2とv3の対応言語のの違いをまとめてみました。
+Swagger(OpenAPI)で API を作り、Swagger Codegen や OpenAPI generator で API のスタブを自動生成する場合の対応言語のの違いをまとめてみました。
+基本的に OpenAPI Specification v3 で YAML/JSON のファイルを作成し、OpenAPI generator でコード生成するのが良いと思いました。
+
+[William](https://github.com/wing328) さんにいろいろ教えてもらいました。ありがとうございます。
+
+対象としているライブラリのバージョンは次のとおりです。
+
+- Swagger Codegen v2: 2.4.12
+- Swagger Codegen v3: 3.0.16
+- OpenAPI generator v4: 4.2.3
 
 サーバー側のコードです。
 
-| | v2 server | v3 server |
-| --- | --- | --- |
-| aspnetcore | ○ | ○ |
-| erlang-server | ○ | × |
-| go-server | ○ | ○ |
-| haskell | ○ | × |
-| inflector | ○ | ○ |
-| jaxrs | ○ | × |
-| jaxrs-cxf | ○ | × |
-| jaxrs-cxf-cdi | ○ | × |
-| jaxrs-jersey | × | ○ |
-| jaxrs-resteasy | ○ | ○ |
-| jaxrs-esteasy-eap | × | ○ |
-| jaxrs-spec | ○ | × |
-| lumen | ○ | × |
-| msf4j | ○ | × |
-| nancyfx | ○ | × |
-| nodejs-server | ○ | ○ |
-| php-silex | ○ | × |
-| php-symfony | ○ | × |
-| python-flask | ○ | ○ |
-| rails5 | ○ | × |
-| scalatra | ○ | × |
-| scala-akka-http-server | × | ○ |
-| sinatra | ○ | × |
-| slim | ○ | × |
-| spring | ○ | ○ |
-| undertow | ○ | × |
-
+|                               | Swagger Codegen v2 | Swagger Codegen v3 | OpenAPI generator v4 |
+| ----------------------------- | ------------------ | ------------------ | -------------------- |
+| ada-server                    | ×                  | ×                  | ○                    |
+| aspnetcore                    | ○                  | ○                  | ○                    |
+| cpp-pistache-server           | ×                  | ×                  | ○                    |
+| cpp-qt5-qhttpengine-server    | ×                  | ×                  | ○                    |
+| cpp-restbed-server            | ×                  | ×                  | ○                    |
+| csharp-nancyfx                | ×                  | ×                  | ○                    |
+| erlang-server                 | ○                  | ×                  | ○                    |
+| fsharp-functions (beta)       | ×                  | ×                  | ○                    |
+| fsharp-giraffe-server (beta)  | ×                  | ×                  | ○                    |
+| go-gin-server                 | ×                  | ×                  | ○                    |
+| go-server                     | ○                  | ○                  | ○                    |
+| graphql-nodejs-express-server | ×                  | ×                  | ○                    |
+| haskell                       | ○                  | ×                  | ○                    |
+| java-inflector                | ○                  | ○                  | ○                    |
+| java-msf4j                    | ×                  | ×                  | ○                    |
+| java-pkmst                    | ×                  | ×                  | ○                    |
+| java-play-framework           | ×                  | ×                  | ○                    |
+| java-spring                   | ○                  | ×                  | ×                    |
+| java-undertow-server          | ×                  | ×                  | ○                    |
+| java-vertx                    | ×                  | ×                  | ○                    |
+| java-vertx-web (beta)         | ×                  | ×                  | ○                    |
+| jaxrs                         | ○                  | ×                  | ×                    |
+| jaxrs-cxf                     | ○                  | ×                  | ○                    |
+| jaxrs-cxf-cdi                 | ○                  | ×                  | ○                    |
+| jaxrs-cxf-extended            | ×                  | ×                  | ○                    |
+| jaxrs-jersey                  | ×                  | ○                  | ○                    |
+| jaxrs-resteasy                | ○                  | ○                  | ○                    |
+| jaxrs-resteasy-eap            | ×                  | ○                  | ○                    |
+| jaxrs-spec                    | ○                  | ×                  | ○                    |
+| kotlin-server                 | ×                  | ×                  | ○                    |
+| kotlin-spring                 | ×                  | ×                  | ○                    |
+| kotlin-vertx (beta)           | ×                  | ×                  | ○                    |
+| msf4j                         | ○                  | ×                  | ×                    |
+| nancyfx                       | ○                  | ×                  | ×                    |
+| nodejs-server                 | ○                  | ○                  | ×                    |
+| nodejs-express-server (beta)  | ×                  | ×                  | ○                    |
+| php-laravel                   | ×                  | ×                  | ○                    |
+| php-lumen                     | ○                  | ×                  | ○                    |
+| php-silex                     | ○                  | ×                  | ○                    |
+| php-slim4                     | ○                  | ×                  | ○                    |
+| php-symfony                   | ○                  | ×                  | ○                    |
+| php-ze-ph                     | ×                  | ×                  | ○                    |
+| python-aiohttp                | ×                  | ×                  | ○                    |
+| python-blueplanet             | ×                  | ×                  | ○                    |
+| python-flask                  | ○                  | ○                  | ○                    |
+| rails5(or ruby-on-rails)      | ○                  | ×                  | ○                    |
+| sinatra(ruby-sinatra)         | ×                  | ×                  | ○                    |
+| rust-server                   | ×                  | ×                  | ○                    |
+| scala-finch                   | ×                  | ×                  | ○                    |
+| scala-lagom-server            | ×                  | ×                  | ○                    |
+| scala-play-server             | ×                  | ×                  | ○                    |
+| scalatra                      | ○                  | ×                  | ○                    |
+| scala-akka-http-server        | ×                  | ○                  | ×                    |
+| undertow                      | ○                  | ×                  | ×                    |
 
 クライアント側のコードです。
 
-| | v2 client | v3 client | 
-| akka-scala | ○ | × |
-| android | ○ | × |
-| apex | ○ | × |
-| clojure | ○ | × |
-| cpprest | ○ | × |
-| csharp | ○ | ○ |
-| csharp-dotnet2 | ○ | × |
-| dart | ○ | × |
-| flash | ○ | × |
-| go | ○ | × |
-| groovy | ○ | × |
-| java | ○ | ○ |
-| javascript | ○ | × |
-| javascript-closure-angular | ○ | × |
-| jaxrs-cxf-client | ○ | ○ |
-| jmeter | ○ | × |
-| kotlin | ○ | ○ |
-| objc | ○ | × |
-| perl | ○ | × |
-| php | ○ | ○ |
-| python | ○ | ○ |
-| qt5cpp | ○ | × |
-| ruby | ○ | × |
-| scala | ○ | ○ |
-| scala-gatling | ○ | × |
-| swift | ○ | × |
-| swift3 | ○ | ○ |
-| swift4 | ○ | ○ |
-| swift5 | ○ | × |
-| tizen | ○ | × |
-| typescript-angular | ○ | ○ |
-| typescript-angularjs | ○ | × |
-| typescript-fetch | ○ | × |
-| typescript-inversify | ○ | × |
-| typescript-node | ○ | × |
-
-基本はv3でいいと思ってるけど、自動生成は期待できないかなぁ
+|                            | Swagger Codegen v2 | Swagger Codegen v3 | OpenAPI generator v4 |
+| -------------------------- | ------------------ | ------------------ | -------------------- |
+| ada                        | ×                  | ×                  | ○                    |
+| android                    | ○                  | ×                  | ○                    |
+| apex                       | ○                  | ×                  | ○                    |
+| bash                       | ○                  | ×                  | ○                    |
+| c                          | ○                  | ×                  | ○                    |
+| clojure                    | ○                  | ×                  | ○                    |
+| qt5cpp(or cpp-qt5-client)  | ○                  | ×                  | ○                    |
+| cpprest                    | ○                  | ×                  | ○                    |
+| tizen(or cpp-tizen)        | ○                  | ×                  | ○                    |
+| csharp                     | ○                  | ○                  | ○                    |
+| csharp-dotnet2             | ○                  | ×                  | ※deprecated          |
+| csharp-netcore             | ×                  | ×                  | ○                    |
+| dart                       | ○                  | ×                  | ○                    |
+| dart-dio                   | ×                  | ×                  | ○                    |
+| dart-jaguar                | ×                  | ×                  | ○                    |
+| eiffel                     | ×                  | ×                  | ○                    |
+| elixir                     | ×                  | ×                  | ○                    |
+| elm                        | ×                  | ×                  | ○                    |
+| erlang-client              | ×                  | ×                  | ○                    |
+| erlang-proper              | ×                  | ×                  | ○                    |
+| flash                      | ○                  | ×                  | ○                    |
+| go                         | ○                  | ×                  | ○                    |
+| groovy                     | ○                  | ×                  | ○                    |
+| haskell-http-client        | ×                  | ×                  | ○                    |
+| java                       | ○                  | ○                  | ○                    |
+| javascript                 | ○                  | ×                  | ○                    |
+| javascript-closure-angular | ○                  | ×                  | ○                    |
+| javascript-flowtyped       | ×                  | ×                  | ○                    |
+| jaxrs-cxf-client           | ○                  | ○                  | ○                    |
+| jmeter                     | ○                  | ×                  | ○                    |
+| k6 (beta)                  | ×                  | ×                  | ○                    |
+| kotlin                     | ○                  | ○                  | ○                    |
+| lua                        | ×                  | ×                  | ○                    |
+| nim (beta)                 | ×                  | ×                  | ○                    |
+| objc                       | ○                  | ×                  | ○                    |
+| ocaml                      | ×                  | ×                  | ○                    |
+| perl                       | ○                  | ×                  | ○                    |
+| php                        | ○                  | ○                  | ○                    |
+| powershell                 | ×                  | ×                  | ○                    |
+| python                     | ○                  | ○                  | ○                    |
+| r                          | ×                  | ×                  | ○                    |
+| ruby                       | ○                  | ×                  | ○                    |
+| rust                       | ×                  | ×                  | ○                    |
+| akka-scala(or scala-akka)  | ○                  | ×                  | ○                    |
+| scala                      | ○                  | ○                  | ×                    |
+| scala-gatling              | ○                  | ×                  | ○                    |
+| scalaz                     | ×                  | ×                  | ○                    |
+| swift                      | ○                  | ×                  | ×                    |
+| swift3                     | ○                  | ○                  | ※deprecated          |
+| swift4                     | ○                  | ○                  | ○                    |
+| swift5                     | ○                  | ×                  | ○                    |
+| typescript-angular         | ○                  | ○                  | ○                    |
+| typescript-angularjs       | ○                  | ×                  | ○                    |
+| typescript-aurelia         | ×                  | ×                  | ○                    |
+| typescript-axios           | ×                  | ×                  | ○                    |
+| typescript-fetch           | ○                  | ×                  | ○                    |
+| typescript-inversify       | ○                  | ×                  | ○                    |
+| typescript-jquery          | ×                  | ×                  | ○                    |
+| typescript-node            | ○                  | ×                  | ○                    |
+| typescript-redux-query     | ×                  | ×                  | ○                    |
+| typescript-rxjs            | ×                  | ×                  | ○                    |
