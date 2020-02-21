@@ -124,7 +124,7 @@ Swagger(OpenAPI)で API を作り、Swagger Codegen や OpenAPI generator で AP
 | akka-scala / scala-akka            | ○ (akka-scala)     | ×                  | ○ (scala-akka)                  |
 | scala-gatling                      | ○                  | ×                  | ○                               |
 | scalaz                             | ○                  | ×                  | ○                               |
-| swift                              | ○                  | ×                  | △ (swift2-deerecated)           |
+| swift                              | ○                  | ×                  | △ (swift-deerecated)            |
 | swift3                             | ○                  | ○                  | △ (swift3-deprecated)           |
 | swift4                             | ○                  | ○                  | ○                               |
 | swift5                             | ○                  | ○                  | ○                               |
