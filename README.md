@@ -1,6 +1,6 @@
 # Rhyztech blog
 
-[http://blog.rhyztech.net](http://blog.rhyztech.net)
+[https://blog.rhyztech.net](https://blog.rhyztech.net)
 
 
 ## 記事の作り方
